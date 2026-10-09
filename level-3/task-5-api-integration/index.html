@@ -1,17 +1,96 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Cognifyz internship Task 5: fetch public API data and update the DOM with loading and error states.">
-<title>Task 5 — API Integration</title>
-<link rel="icon" href="data:,">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task 5 — API Integration</title>
+  <link rel="icon" href="data:,">
+  <style>
+    body {
+      margin: 0;
+      padding: 24px;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #20263a;
+      background: #f4f6fb;
+    }
 
-<style>
-:root{--ink:#192334;--muted:#5c687a;--brand:#5b4bdb;--line:#e2e7ef;--surface:#fff;--wash:#f5f6fb}
-*{box-sizing:border-box}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--wash);color:var(--ink);line-height:1.6}
-main{width:min(900px,92vw);margin:48px auto}.panel{background:white;border:1px solid var(--line);border-radius:20px;padding:clamp(22px,4vw,38px);box-shadow:0 12px 30px #202b450d}
-.eyebrow{font-size:.75rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--brand)}h1{line-height:1.1;letter-spacing:-.035em}p{color:var(--muted)}a{color:var(--brand)}button,.button{border:0;border-radius:10px;background:var(--brand);color:#fff;padding:11px 16px;font:inherit;font-weight:700;cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #aaa1ff;outline-offset:3px}.back{display:inline-block;margin-bottom:18px}img{max-width:100%;height:auto;border-radius:14px}.toolbar{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.posts{display:grid;gap:12px;margin-top:24px}.post{border:1px solid var(--line);border-radius:12px;padding:18px;background:#fbfbff}.post h2{font-size:1.05rem;text-transform:capitalize;margin-top:0}.post p{margin-bottom:0}.toolbar span{color:var(--muted);font-size:.92rem}
-</style>
+    main {
+      max-width: 760px;
+      margin: 24px auto;
+      padding: 24px;
+      background: white;
+      border: 1px solid #dfe4ed;
+      border-radius: 10px;
+    }
+
+    a {
+      color: #5144bd;
+    }
+
+    button {
+      padding: 10px 16px;
+      font: inherit;
+      color: white;
+      background: #5144bd;
+      border: 0;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      cursor: wait;
+      opacity: 0.7;
+    }
+
+    .toolbar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    #apiStatus {
+      color: #4f596a;
+    }
+
+    .post {
+      margin-top: 14px;
+      padding: 16px;
+      background: white;
+      border: 1px solid #dfe4ed;
+      border-radius: 8px;
+    }
+
+    .post h2 {
+      margin-top: 0;
+      font-size: 1.1rem;
+      text-transform: capitalize;
+    }
+
+    .post p {
+      margin-bottom: 0;
+      color: #4f596a;
+    }
+  </style>
+  <script src="script.js" defer></script>
 </head>
-<body><main><a class="back" href="../../index.html">← Task index</a><section class="panel"><p class="eyebrow">Level 3 · Task 5</p><h1>Loading Posts from an API</h1><p>I used fetch() to get sample posts from JSONPlaceholder. Click the button to load them. If the request fails, a message should appear.</p><div class="toolbar"><button id="loadPosts" type="button">Load posts</button><span id="apiStatus" role="status" aria-live="polite">Ready to fetch sample posts.</span></div><div id="posts" class="posts" aria-live="polite"></div></section></main><script src="script.js" defer></script></body></html>
+<body>
+  <main>
+    <a href="../../index.html">← Back to task list</a>
+    <h1>Loading Posts from an API</h1>
+    <p>
+      This page gets sample posts from JSONPlaceholder using JavaScript.
+      Press the button to load the posts. An error message is shown if the
+      request does not work.
+    </p>
+
+    <div class="toolbar">
+      <button id="loadPosts" type="button">Load posts</button>
+      <span id="apiStatus" role="status" aria-live="polite">Ready to fetch sample posts.</span>
+    </div>
+
+    <div id="posts" aria-live="polite"></div>
+  </main>
+</body>
+</html>
