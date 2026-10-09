@@ -22,4 +22,4 @@ The implementation was checked against the supplied Cognifyz FRONT-END DEVELOPME
 - Confirm the public JSONPlaceholder endpoint works from the network where the project is demonstrated; automated API behavior tests use mocked responses to stay deterministic.
 - Check the remote Unsplash image and Bootstrap CDN when presenting from an internet-connected browser.
 - Capture final screenshots and record a short project walkthrough for LinkedIn as requested in the brief.
-- GitHub publishing and live hosting are not marked complete until the repository and deployed pages have been verified online.
+- Public GitHub repository verified: https://github.com/Bandhan-lab/cognifyz-frontend-internship. Render static-site deploy completed successfully; the root URL and all eight task routes returned HTTP 200. Supporting CSS/JavaScript files tested over HTTPS also returned HTTP 200. Live site: https://cognifyz-frontend-internship.onrender.com.
