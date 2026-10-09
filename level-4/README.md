@@ -1,10 +1,14 @@
-# Level 4 — Expert
+# Level 4 — Bootstrap and Sass
 
-## Task 7: Component-Based Styling
-Uses Bootstrap's responsive grid, navbar, cards, buttons, badges, and alert component with a small custom styling layer. Internet access is needed for the Bootstrap CDN.
+## Task 7: Bootstrap Components
+I used Bootstrap for the navbar, responsive grid, cards, buttons and badges. A few custom CSS rules change the colours. The Bootstrap CDN needs an internet connection.
 
-## Task 8: Introduction to CSS Preprocessing
-Uses variables and nested selectors in task-8-sass/styles.scss; the compiled styles.css is linked by the HTML page.
+## Task 8: CSS Preprocessing with Sass
+The `styles.scss` file uses variables and nesting. The browser loads the compiled `styles.css` file.
 
 ## Compile Sass
-From the project root, run npx --yes sass level-4/task-8-sass/styles.scss level-4/task-8-sass/styles.css.
+Run this from the project root after editing the SCSS:
+
+```bash
+npx --yes sass level-4/task-8-sass/styles.scss level-4/task-8-sass/styles.css
+```
