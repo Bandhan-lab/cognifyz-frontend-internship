@@ -9,7 +9,7 @@
     { input: document.querySelector("#message"), error: document.querySelector("#messageError"), message: "Enter a message of at least 10 characters." }
   ];
 
-  function validateField(field) {
+  // Check one field and show its error message if the value is not valid.\n  function validateField(field) {
     const value = field.input.value.trim();
     let valid = field.input.checkValidity();
     if (field.input.id === "fullName") valid = value.length >= 2;
@@ -19,16 +19,16 @@
     return valid;
   }
 
-  fields.forEach((field) => {
+  // If the user starts fixing a field, update its error while they type.\n  fields.forEach((field) => {
     field.input.addEventListener("input", () => {
       if (field.input.getAttribute("aria-invalid") === "true") validateField(field);
     });
     field.input.addEventListener("change", () => validateField(field));
   });
 
-  form.addEventListener("submit", (event) => {
+  // Stop the browser from submitting the demo form to another page.\n  form.addEventListener("submit", (event) => {
     event.preventDefault();
-    const results = fields.map(validateField);
+    const results = fields.map(validateField);\n    // Only show success when every field passes validation.
     if (results.every(Boolean)) {
       status.textContent = "Validation successful. No information was sent or stored.";
       status.style.color = "#18794e";
