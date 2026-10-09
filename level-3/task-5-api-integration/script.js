@@ -3,7 +3,7 @@
   const button = document.querySelector("#loadPosts");
   const status = document.querySelector("#apiStatus");
   const container = document.querySelector("#posts");
-  const endpoint = "https://jsonplaceholder.typicode.com/posts?_limit=6";
+  // JSONPlaceholder gives us sample posts to practise working with an API.\n  const endpoint = "https://jsonplaceholder.typicode.com/posts?_limit=6";
 
   function showMessage(message) {
     container.replaceChildren();
@@ -12,7 +12,7 @@
     container.append(p);
   }
 
-  async function loadPosts() {
+  // async/await lets us wait for the API response before showing the posts.\n  async function loadPosts() {
     button.disabled = true;
     status.textContent = "Loading sample posts…";
     showMessage("Please wait while the API responds.");
@@ -33,10 +33,10 @@
         container.append(article);
       });
       status.textContent = `Loaded ${posts.length} sample posts successfully.`;
-    } catch (error) {
+    } catch (error) {\n      // This message is shown if the request fails or the response is not usable.
       status.textContent = "Could not load data.";
       showMessage(`${error.message || "An unexpected error occurred."} Check your connection and try again.`);
-    } finally {
+    } finally {\n      // Let the user try again after either success or failure.
       button.disabled = false;
     }
   }
