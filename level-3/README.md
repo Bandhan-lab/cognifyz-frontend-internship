@@ -1,10 +1,10 @@
-# Level 3 — Advanced
+# Level 3 — API and Forms
 
 ## Task 5: API Integration
-task-5-api-integration/script.js uses fetch() to retrieve JSONPlaceholder posts, parses JSON, updates the DOM, and reports loading and network/API errors.
+The JavaScript file uses `fetch()` to get sample posts from JSONPlaceholder and show them on the page. It also shows a message if the request fails.
 
 ## Task 6: Form Styling and Validation
-task-6-form-validation/styles.css styles the form; script.js validates inputs on the client and presents field-specific feedback. It does not send or store submitted data.
+The form has its own CSS and JavaScript files. The script checks the name, email, topic and message before showing a result. It does not send the form data anywhere.
 
 ## Run
-Start the local server from the project root with python3 -m http.server 8000, then open each task folder URL in a browser. Task 5 needs internet access for the public API.
+From the project root, run `python3 -m http.server 8000`. Task 5 needs an internet connection to load the sample posts.
