@@ -1,10 +1,10 @@
-# Level 1 — Beginner
+# Level 1 — HTML and CSS
 
 ## Task 1: Basic HTML Page
-Demonstrates a valid HTML document, page title, headings, paragraphs, and an illustrative image with alternative text.
+I used a title, headings, paragraphs and an image to practise the structure of an HTML page.
 
-## Task 2: Styling with Inline CSS
-Demonstrates font color, size, and background styling directly on HTML elements, as required by the brief.
+## Task 2: Inline CSS
+I used the `style` attribute to change text colour, font size and background colour. The inline styles are intentional for this task.
 
 ## Run
-Start the local server from the project root with python3 -m http.server 8000, then open each task folder URL in a browser.
+From the project root, run `python3 -m http.server 8000` and open the task links in your browser.
