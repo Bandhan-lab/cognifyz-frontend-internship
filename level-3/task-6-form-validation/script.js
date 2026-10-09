@@ -31,7 +31,8 @@
   // Stop the browser from submitting the demo form to another page.
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    const results = fields.map(validateField);\n    // Only show success when every field passes validation.
+    const results = fields.map(validateField);
+    // Only show success when every field passes validation.
     if (results.every(Boolean)) {
       status.textContent = "Validation successful. No information was sent or stored.";
       status.style.color = "#18794e";
