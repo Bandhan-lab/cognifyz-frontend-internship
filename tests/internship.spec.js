@@ -7,7 +7,7 @@ test('all pages load and task index links work', async ({ page }) => {
     expect(response.status(), path).toBe(200);
     await expect(page.locator('h1').first()).toBeVisible();
     if (path !== '/') {
-      await page.getByRole('link', { name: /Task index/ }).click();
+      await page.getByRole('link', { name: /Task index|Back to task list/ }).click();
       await expect(page).toHaveURL(/\/index\.html$/);
       await expect(page.locator('h1')).toContainText('Front-End Development Tasks');
     }
