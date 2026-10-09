@@ -88,22 +88,17 @@ The current Playwright configuration uses `/usr/bin/google-chrome` on the connec
 - Do not claim that a task is tested until you have performed the checks and recorded evidence.
 - Keep code original, understand each part, and credit third-party libraries and APIs where appropriate.
 
-## Publish to GitHub
+## Source repository
 
-Create an empty repository on your GitHub account, then run these commands from the project root (replace the URL with your repository URL):
+GitHub repository: https://github.com/Bandhan-lab/cognifyz-frontend-internship
 
-```bash
-git init
-git add .
-git commit -m "Build Cognifyz front-end internship tasks"
-git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/cognifyz-frontend-internship.git
-git push -u origin main
-```
+## Live deployment
 
-## Deployment
+**Live site:** https://cognifyz-frontend-internship.onrender.com
 
-For GitHub Pages, open the repository on GitHub → **Settings** → **Pages** → choose **Deploy from a branch** → select `main` and `/ (root)` → **Save**. Because each task is a separate folder, pages will be available at paths such as `/level-3/task-5-api-integration/`. Wait for the Pages workflow to finish and verify the deployed URLs.
+The static site is hosted on Render and is configured for automatic deployment from the `main` branch. The root page links to all eight tasks. Each task has its own directory and can be opened directly from the live site.
+
+To update the deployed site, commit and push changes to `main`. Render will rebuild and publish the static files from the repository root (`publishPath: .`). Check the deployment status in the [Render dashboard](https://dashboard.render.com/static/srv-db49nn3ncjis73ca65kg) after a change.
 
 ## Suggested final evidence
 
