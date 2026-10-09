@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Cognifyz internship Task 7: Bootstrap component-based layout.">
+<title>Task 7 — Bootstrap Components</title>
+<link rel="icon" href="data:,">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<style>body{background:#f5f6fb;color:#192334}.demo-shell{max-width:1000px}.back{display:inline-block;margin:1.5rem 0}.hero{background:linear-gradient(120deg,#f0edff,#eaf5ff);border:1px solid #e2e7ef;border-radius:1.25rem}.card{height:100%;border-color:#e2e7ef}.text-purple{color:#5b4bdb!important}</style>
+</head>
+<body>
+<div class="container demo-shell py-3">
+<a class="back" href="../../index.html">← Task index</a>
+<nav class="navbar navbar-expand-lg bg-white rounded-4 border px-3 mb-4" aria-label="Main navigation">
+<a class="navbar-brand fw-bold text-purple" href="#">Cognifyz · Task 7</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="mainNav"><ul class="navbar-nav ms-auto"><li class="nav-item"><a class="nav-link" href="#features">Components</a></li><li class="nav-item"><a class="nav-link" href="#about">About</a></li></ul></div>
+</nav>
+<header class="hero p-4 p-md-5 mb-4"><span class="badge text-bg-light text-purple mb-3">Level 4 · Expert</span><h1 class="display-5 fw-bold">Reusable by design.</h1><p class="lead mb-4">This page demonstrates Bootstrap's responsive grid, navbar, cards, buttons, and utility classes with a small layer of custom styling.</p><a class="btn btn-primary" href="#features">Explore components</a></header>
+<section id="features" class="row g-3 mb-4">
+<div class="col-12 col-md-4"><article class="card p-3"><div class="card-body"><h2 class="h5">Responsive grid</h2><p class="card-text text-secondary">Bootstrap's grid adapts columns to available screen width.</p><span class="badge text-bg-success">Layout</span></div></article></div>
+<div class="col-12 col-md-4"><article class="card p-3"><div class="card-body"><h2 class="h5">Reusable components</h2><p class="card-text text-secondary">Standard components provide consistent interaction patterns.</p><span class="badge text-bg-info">Components</span></div></article></div>
+<div class="col-12 col-md-4"><article class="card p-3"><div class="card-body"><h2 class="h5">Custom styling</h2><p class="card-text text-secondary">Small custom rules tailor framework components to this design.</p><span class="badge text-bg-warning">Customization</span></div></article></div>
+</section>
+<section id="about" class="alert alert-light border"><strong>Implementation note:</strong> Bootstrap is loaded from a CDN, so an internet connection is required. Check the browser console and network panel if components or styles do not load.</section>
+<footer class="text-secondary small py-3">Task 7 · Component-Based Styling · Bandhan Kumar Sahoo</footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body></html>

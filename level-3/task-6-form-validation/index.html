@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Cognifyz internship Task 6: accessible form styling and client-side validation.">
+<title>Task 6 — Form Styling and Validation</title>
+<link rel="icon" href="data:,">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body><main><a class="back" href="../../index.html">← Task index</a><section class="panel"><p class="eyebrow">Level 3 · Task 6</p><h1>Contact form</h1><p>Complete the fields to see client-side validation. This demo does not send or store the submitted information.</p><form id="contactForm" novalidate><div class="field"><label for="fullName">Full name</label><input id="fullName" name="fullName" autocomplete="name" required minlength="2" aria-describedby="nameError"><small id="nameError" class="error"></small></div><div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required aria-describedby="emailError"><small id="emailError" class="error"></small></div><div class="field"><label for="topic">Topic</label><select id="topic" name="topic" required aria-describedby="topicError"><option value="">Choose a topic</option><option>Internship task</option><option>Front-end development</option><option>General question</option></select><small id="topicError" class="error"></small></div><div class="field"><label for="message">Message</label><textarea id="message" name="message" rows="4" required minlength="10" aria-describedby="messageError"></textarea><small id="messageError" class="error"></small></div><button type="submit">Validate form</button><p id="formStatus" role="status" aria-live="polite"></p></form></section></main><script src="script.js" defer></script></body></html>

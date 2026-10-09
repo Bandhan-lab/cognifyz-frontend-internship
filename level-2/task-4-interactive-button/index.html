@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Cognifyz internship Task 4: JavaScript button changes the background color.">
+<title>Task 4 — Interactive Button</title>
+<link rel="icon" href="data:,">
+
+<style>
+:root{--ink:#192334;--muted:#5c687a;--brand:#5b4bdb;--line:#e2e7ef;--surface:#fff;--wash:#f5f6fb}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--wash);color:var(--ink);line-height:1.6}
+main{width:min(900px,92vw);margin:48px auto}.panel{background:white;border:1px solid var(--line);border-radius:20px;padding:clamp(22px,4vw,38px);box-shadow:0 12px 30px #202b450d}
+.eyebrow{font-size:.75rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--brand)}h1{line-height:1.1;letter-spacing:-.035em}p{color:var(--muted)}a{color:var(--brand)}button,.button{border:0;border-radius:10px;background:var(--brand);color:#fff;padding:11px 16px;font:inherit;font-weight:700;cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #aaa1ff;outline-offset:3px}.back{display:inline-block;margin-bottom:18px}img{max-width:100%;height:auto;border-radius:14px}
+</style>
+</head>
+<body><main><a class="back" href="../../index.html">← Task index</a><section class="panel"><p class="eyebrow">Level 2 · Task 4</p><h1>Change the mood</h1><p>Click the button to change the page background. Use it again to cycle through different colors.</p><button id="colorButton" type="button">Change background</button><p id="colorStatus" role="status" aria-live="polite">Current background: default</p></section></main><script>
+(() => {
+  "use strict";
+  const colors = [
+    { name: "lavender", value: "#eeeaff" },
+    { name: "mint", value: "#e4f8ef" },
+    { name: "sky", value: "#e6f3ff" },
+    { name: "peach", value: "#fff0e5" }
+  ];
+  let index = -1;
+  const button = document.querySelector("#colorButton");
+  const status = document.querySelector("#colorStatus");
+  button.addEventListener("click", () => {
+    index = (index + 1) % colors.length;
+    document.body.style.backgroundColor = colors[index].value;
+    status.textContent = `Current background: ${colors[index].name}`;
+  });
+})();
+</script></body></html>
