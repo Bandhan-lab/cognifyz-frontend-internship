@@ -3,39 +3,135 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A task index for the Cognifyz Front-End Development internship project.">
-  <title>Cognifyz Internship | Task Index</title>
-<link rel="icon" href="data:,">
+  <meta name="description" content="My eight Cognifyz front-end internship tasks.">
+  <title>My Cognifyz Front-End Tasks</title>
+  <link rel="icon" href="data:,">
   <style>
-    :root { color-scheme: light; --ink:#182230; --muted:#5d6878; --brand:#5b4bdb; --line:#e4e8ef; --surface:#fff; --wash:#f5f6fb; }
-    * { box-sizing:border-box; }
-    body { margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; color:var(--ink); background:linear-gradient(145deg,#f6f4ff,#f7f9fc 55%,#eef7ff); }
-    main { width:min(1080px,92vw); margin:0 auto; padding:56px 0; }
-    .eyebrow { color:var(--brand); font-weight:800; text-transform:uppercase; letter-spacing:.12em; font-size:.76rem; }
-    h1 { font-size:clamp(2.2rem,6vw,4.6rem); line-height:1.02; letter-spacing:-.055em; margin:.6rem 0 1rem; max-width:800px; }
-    .lead { color:var(--muted); font-size:1.1rem; line-height:1.7; max-width:720px; }
-    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; margin-top:34px; }
-    .card { background:rgba(255,255,255,.88); border:1px solid var(--line); border-radius:20px; padding:24px; box-shadow:0 12px 30px #202b4510; }
-    .card h2 { margin:.3rem 0 .8rem; font-size:1.2rem; }
-    .card p { color:var(--muted); line-height:1.6; }
-    ul { padding-left:1.2rem; line-height:1.9; }
-    a { color:var(--brand); font-weight:650; text-decoration-thickness:1px; text-underline-offset:3px; }
-    footer { margin-top:28px; color:var(--muted); font-size:.9rem; }
-    @media(max-width:650px) { main{padding:34px 0}.grid{grid-template-columns:1fr}.card{padding:20px} }
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #20263a;
+      background: #f4f6fb;
+    }
+
+    main {
+      width: min(1000px, 92%);
+      margin: 0 auto;
+      padding: 40px 0;
+    }
+
+    h1 {
+      margin-bottom: 8px;
+      font-size: clamp(2rem, 5vw, 3rem);
+    }
+
+    .intro {
+      max-width: 680px;
+      color: #5c687a;
+    }
+
+    .levels {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .level {
+      padding: 22px;
+      background: white;
+      border: 1px solid #dfe4ed;
+      border-radius: 12px;
+    }
+
+    .level h2 {
+      margin-top: 0;
+      font-size: 1.2rem;
+    }
+
+    li {
+      margin: 9px 0;
+    }
+
+    a {
+      color: #5144bd;
+    }
+
+    a:focus-visible {
+      outline: 3px solid #a9a0ff;
+      outline-offset: 3px;
+    }
+
+    footer {
+      margin-top: 28px;
+      color: #5c687a;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 620px) {
+      main {
+        padding: 26px 0;
+      }
+
+      .levels {
+        grid-template-columns: 1fr;
+      }
+
+      .level {
+        padding: 18px;
+      }
+    }
   </style>
 </head>
 <body>
   <main>
-    <p class="eyebrow">Cognifyz · Front-End Development</p>
-    <h1>Build small.<br>Ship thoughtfully.</h1>
-    <p class="lead">An organized, task-by-task workspace for the eight front-end internship exercises. Each task is kept separate so it can be reviewed and demonstrated independently.</p>
-    <section class="grid" aria-label="Internship task levels">
-      <article class="card"><p class="eyebrow">Level 1 · Beginner</p><h2>HTML foundations</h2><ul><li><a href="level-1/task-1-basic-html/">Task 1 — Basic HTML Page</a></li><li><a href="level-1/task-2-inline-css/">Task 2 — Inline CSS</a></li></ul></article>
-      <article class="card"><p class="eyebrow">Level 2 · Intermediate</p><h2>Responsive and interactive</h2><ul><li><a href="level-2/task-3-responsive-design/">Task 3 — Responsive Design</a></li><li><a href="level-2/task-4-interactive-button/">Task 4 — Interactive Button</a></li></ul></article>
-      <article class="card"><p class="eyebrow">Level 3 · Advanced</p><h2>Data and forms</h2><ul><li><a href="level-3/task-5-api-integration/">Task 5 — API Integration</a></li><li><a href="level-3/task-6-form-validation/">Task 6 — Form Styling and Validation</a></li></ul></article>
-      <article class="card"><p class="eyebrow">Level 4 · Expert</p><h2>Reusable styling</h2><ul><li><a href="level-4/task-7-bootstrap-components/">Task 7 — Bootstrap Components</a></li><li><a href="level-4/task-8-sass/">Task 8 — Sass Preprocessing</a></li></ul></article>
+    <p>My Cognifyz internship project</p>
+    <h1>Front-End Development Tasks</h1>
+    <p class="intro">
+      Hi, I'm Bandhan. I made these eight pages while practising the front-end
+      topics from the internship task list. Open any task below to see the example.
+    </p>
+
+    <section class="levels" aria-label="Tasks grouped by level">
+      <article class="level">
+        <h2>Level 1 — HTML and CSS</h2>
+        <ul>
+          <li><a href="level-1/task-1-basic-html/">Task 1: Basic HTML Page</a></li>
+          <li><a href="level-1/task-2-inline-css/">Task 2: Inline CSS</a></li>
+        </ul>
+      </article>
+
+      <article class="level">
+        <h2>Level 2 — Layout and JavaScript</h2>
+        <ul>
+          <li><a href="level-2/task-3-responsive-design/">Task 3: Responsive Design</a></li>
+          <li><a href="level-2/task-4-interactive-button/">Task 4: Interactive Button</a></li>
+        </ul>
+      </article>
+
+      <article class="level">
+        <h2>Level 3 — API and Forms</h2>
+        <ul>
+          <li><a href="level-3/task-5-api-integration/">Task 5: API Integration</a></li>
+          <li><a href="level-3/task-6-form-validation/">Task 6: Form Styling and Validation</a></li>
+        </ul>
+      </article>
+
+      <article class="level">
+        <h2>Level 4 — Bootstrap and Sass</h2>
+        <ul>
+          <li><a href="level-4/task-7-bootstrap-components/">Task 7: Bootstrap Components</a></li>
+          <li><a href="level-4/task-8-sass/">Task 8: CSS Preprocessing with Sass</a></li>
+        </ul>
+      </article>
     </section>
-    <footer>Created by Bandhan Kumar Sahoo · Built to follow the supplied internship task brief.</footer>
+
+    <footer>
+      Bandhan Kumar Sahoo · BTech CSE (AI &amp; ML), 2nd year
+    </footer>
   </main>
 </body>
 </html>
