@@ -3,7 +3,8 @@
   const button = document.querySelector("#loadPosts");
   const status = document.querySelector("#apiStatus");
   const container = document.querySelector("#posts");
-  // JSONPlaceholder gives us sample posts to practise working with an API.\n  const endpoint = "https://jsonplaceholder.typicode.com/posts?_limit=6";
+  // JSONPlaceholder gives us sample posts to practise working with an API.
+  const endpoint = "https://jsonplaceholder.typicode.com/posts?_limit=6";
 
   function showMessage(message) {
     container.replaceChildren();
@@ -34,10 +35,12 @@
         container.append(article);
       });
       status.textContent = `Loaded ${posts.length} sample posts successfully.`;
-    } catch (error) {\n      // This message is shown if the request fails or the response is not usable.
+    } catch (error) {
+      // This message is shown if the request fails or the response is not usable.
       status.textContent = "Could not load data.";
       showMessage(`${error.message || "An unexpected error occurred."} Check your connection and try again.`);
-    } finally {\n      // Let the user try again after either success or failure.
+    } finally {
+      // Let the user try again after either success or failure.
       button.disabled = false;
     }
   }
