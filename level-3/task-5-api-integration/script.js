@@ -12,7 +12,8 @@
     container.append(p);
   }
 
-  // async/await lets us wait for the API response before showing the posts.\n  async function loadPosts() {
+  // async/await lets us wait for the API response before showing the posts.
+  async function loadPosts() {
     button.disabled = true;
     status.textContent = "Loading sample posts…";
     showMessage("Please wait while the API responds.");
