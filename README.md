@@ -19,7 +19,7 @@ No build step is required for Tasks 1–7. For best results, serve the folder th
 sudo apt update
 sudo apt install -y git unzip python3
 mkdir -p ~/Projects
-unzip cognifyz-frontend-internship.zip -d ~/Projects
+unzip cognifyz-frontend-internship-final.zip -d ~/Projects
 cd ~/Projects/cognifyz-frontend-internship
 python3 -m http.server 8000
 ```
