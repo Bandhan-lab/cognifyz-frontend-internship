@@ -1,17 +1,68 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Cognifyz internship Task 1: semantic HTML structure, title, headings, paragraph, and image.">
-<title>Task 1 — Basic HTML Page</title>
-<link rel="icon" href="data:,">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task 1 — Basic HTML Page</title>
+  <link rel="icon" href="data:,">
+  <style>
+    body {
+      margin: 0;
+      padding: 24px;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #20263a;
+      background: #f4f6fb;
+    }
 
-<style>
-:root{--ink:#192334;--muted:#5c687a;--brand:#5b4bdb;--line:#e2e7ef;--surface:#fff;--wash:#f5f6fb}
-*{box-sizing:border-box}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--wash);color:var(--ink);line-height:1.6}
-main{width:min(900px,92vw);margin:48px auto}.panel{background:white;border:1px solid var(--line);border-radius:20px;padding:clamp(22px,4vw,38px);box-shadow:0 12px 30px #202b450d}
-.eyebrow{font-size:.75rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--brand)}h1{line-height:1.1;letter-spacing:-.035em}p{color:var(--muted)}a{color:var(--brand)}button,.button{border:0;border-radius:10px;background:var(--brand);color:#fff;padding:11px 16px;font:inherit;font-weight:700;cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #aaa1ff;outline-offset:3px}.back{display:inline-block;margin-bottom:18px}img{max-width:100%;height:auto;border-radius:14px}
-</style>
+    main {
+      max-width: 760px;
+      margin: 20px auto;
+      padding: 24px;
+      background: white;
+      border: 1px solid #dfe4ed;
+      border-radius: 10px;
+    }
+
+    a {
+      color: #5144bd;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin-top: 16px;
+      border-radius: 8px;
+    }
+
+    p {
+      color: #4f596a;
+    }
+  </style>
 </head>
-<body><main><a class="back" href="../../index.html">← Task index</a><section class="panel"><p class="eyebrow">Level 1 · Task 1</p><h1>My First HTML Page</h1><p>This is my first task. I used headings, paragraphs and an image to practise the basic structure of an HTML page.</p><h2>What I learned</h2><p>HTML is used to organize the content on a page. In the next tasks, I practise adding CSS and JavaScript.</p><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80" alt="Laptop and workspace on a desk" width="1200" height="800"><p><small>Image source: Unsplash. If offline, replace the remote image with a locally stored, licensed image.</small></p></section></main></body></html>
+<body>
+  <main>
+    <a href="../../index.html">← Back to task list</a>
+    <h1>My First HTML Page</h1>
+    <p>
+      This is my first task for the front-end internship. I used a page title,
+      headings, paragraphs and an image to practise basic HTML.
+    </p>
+
+    <h2>What I learned</h2>
+    <p>
+      HTML gives a webpage its structure. I can use different heading levels
+      to organize information and add images to make the page more interesting.
+    </p>
+
+    <img
+      src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80"
+      alt="Laptop and workspace on a desk"
+      width="1200"
+      height="800"
+    >
+    <p><small>Image source: Unsplash.</small></p>
+  </main>
+</body>
+</html>
