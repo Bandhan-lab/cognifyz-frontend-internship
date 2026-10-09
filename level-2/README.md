@@ -1,10 +1,10 @@
-# Level 2 — Intermediate
+# Level 2 — Layout and JavaScript
 
 ## Task 3: Responsive Design
-Uses the separate task-3-responsive-design/styles.css stylesheet and media queries to adapt the layout for desktop, tablet, and mobile widths.
+The page uses a separate `styles.css` file. The media queries change the cards from three columns to two and then one as the screen gets smaller.
 
 ## Task 4: Interactive Button
-Uses JavaScript to change the page background when the button is clicked and announces the current color.
+The button uses JavaScript to change the page background colour each time it is clicked.
 
 ## Run
-Start the local server from the project root with python3 -m http.server 8000, then open each task folder URL in a browser.
+From the project root, run `python3 -m http.server 8000` and open the task links in your browser.
